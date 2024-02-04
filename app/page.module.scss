@@ -1,0 +1,4 @@
+@import "../styles/mixins.scss";
+.main {
+  @include flex(column, center, center);
+}

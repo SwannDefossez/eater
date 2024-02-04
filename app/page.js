@@ -1,10 +1,13 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Header from "./components/header/Header";
+import css from "./page.module.scss";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div>home</div>
+    <main className={css.main}>
+      <Header />
+      <div>
+        sdfsdf
+      </div>
     </main>
   );
 }
