@@ -1,5 +1,5 @@
 @import "@/styles/mixins.scss";
-.menu {
+.userMenu {
   position: fixed;
   top: 20vh;
   left: 0;
@@ -55,4 +55,13 @@
   to {
     transform: scaleY(0);
   }
+}
+.gear {
+  transform: rotate(-45deg);
+  transition: all 0.4s ease-in-out;
+  
+}
+.rotate {
+  transform: rotate(45deg);
+  transition: all 0.4s ease-in-out;
 }
