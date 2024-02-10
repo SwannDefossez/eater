@@ -27,7 +27,9 @@ const UserMenu = ({ isMenuOpen, onMenuToggle }) => {
           <li className={css.border}>Thème</li>
           <li className={css.border}>
             <form action={handleLogout}>
-              <button>Déconnexion</button>
+              <button style={{ width: "100%", height: "5rem" }}>
+                Déconnexion
+              </button>
             </form>
           </li>
         </ul>

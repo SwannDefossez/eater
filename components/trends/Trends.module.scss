@@ -1,0 +1,17 @@
+@import "@/styles/mixins.scss";
+
+.container {
+  @include flex(column, center, center);
+  gap: 3rem;
+  h1 {
+    font-weight: 300;
+  }
+}
+.swiper {
+  img {
+    border-radius: 1rem;
+    width: 30vw;
+    max-width: 15rem;
+    height: auto;
+  }
+}

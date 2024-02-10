@@ -1,51 +1,18 @@
-// App.js
-"use client";
-import React, { useState } from "react";
-
-const ChildComponent1 = ({ isMenuOpen, onMenuToggle }) => {
+import { Suspense } from "react";
+import CompanyForm from "@/components/companyForm/companyForm";
+import React from "react";
+import { auth } from "@/lib/auth";
+import CategoryForm from "@/components/categoryForm/categoryForm";
+const CompanyPage = async () => {
+  const session = await auth();
   return (
     <div>
-      <p>Menu 1</p>
-      <button onClick={onMenuToggle}>{isMenuOpen ? "Fermer" : "Ouvrir"}</button>
+      <Suspense fallback={<div>Loading...</div>}>
+        <CompanyForm userId={session.user.id} />
+        <CategoryForm />
+      </Suspense>
     </div>
   );
 };
 
-const ChildComponent2 = ({ isMenuOpen, onMenuToggle }) => {
-  return (
-    <div>
-      <p>Menu 2</p>
-      <button onClick={onMenuToggle}>{isMenuOpen ? "Fermer" : "Ouvrir"}</button>
-    </div>
-  );
-};
-
-const ParentComponent = () => {
-  const [isMenuOpen1, setMenuOpen1] = useState(false);
-  const [isMenuOpen2, setMenuOpen2] = useState(false);
-
-  const handleMenuToggle1 = () => {
-    setMenuOpen1(!isMenuOpen1);
-    setMenuOpen2(false);
-  };
-
-  const handleMenuToggle2 = () => {
-    setMenuOpen2(!isMenuOpen2);
-    setMenuOpen1(false);
-  };
-
-  return (
-    <div>
-      <ChildComponent1
-        isMenuOpen={isMenuOpen1}
-        onMenuToggle={handleMenuToggle1}
-      />
-      <ChildComponent2
-        isMenuOpen={isMenuOpen2}
-        onMenuToggle={handleMenuToggle2}
-      />
-    </div>
-  );
-};
-
-export default ParentComponent;
+export default CompanyPage;
