@@ -10,7 +10,17 @@ const Category = async () => {
   categories = JSON.parse(JSON.stringify(categories));
   return (
     <div className={css.container}>
-      <h2>Category</h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          width: "80vw",
+          borderBottom: "2px solid grey",
+          paddingBottom: "1rem"
+        }}
+      >
+        <h2>Category</h2>
+      </div>
       <div className={css.list}>
         {categories.map((category) => {
           return (
