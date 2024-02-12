@@ -26,7 +26,6 @@ export const generateMetadata = async ({ params }) => {
 const page = async ({ params }) => {
   const { slug } = params;
   const category = await getData(slug);
-  console.log(category);
   if (!category) {
     redirect("/error");
   }

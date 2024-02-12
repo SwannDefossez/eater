@@ -1,3 +1,10 @@
+:root {
+  --sz: 10vmin;
+  --on: #99dc39;
+  --of: #f44336;
+  --lg: var(--of);
+  --sp: 1s;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -29,9 +36,8 @@ a {
 
 .swiper-wrapper {
   max-width: 100vw !important;
-  gap: 1rem !important;
-  height: 30vw !important;
-  max-height: 18rem;
+  gap: 10vw !important;
+  height: 50vw !important;
   padding: 1rem;
 }
 
@@ -47,3 +53,26 @@ a {
   transform: scale(1.05) !important;
   transition: all 0.1s ease-in-out;
 }
+
+.bcg0 {
+  background-color: rgb(189, 255, 255);
+}
+.bcg1 {
+  background-color: rgb(223, 255, 181);
+}
+.bcg2 {
+  background-color: rgb(245, 197, 255);
+}
+.bcg2 {
+  background-color: rgb(255, 221, 183);
+}
+.bcg3 {
+  background-color: rgb(222, 166, 255);
+}
+.bcg4 {
+  background-color: rgb(255, 190, 206);
+}
+.bcg5 {
+  background-color: rgb(224, 150, 172);
+}
+

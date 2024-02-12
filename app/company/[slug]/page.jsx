@@ -1,6 +1,8 @@
 import React from "react";
 import { getCompany } from "@/lib/data";
 import { redirect } from "next/navigation";
+import Image from "next/image";
+import css from "./company.module.scss";
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
   const res = await fetch(`http://localhost:3000/api/company/${slug}`);
@@ -25,13 +27,24 @@ export const generateMetadata = async ({ params }) => {
 const page = async ({ params }) => {
   const { slug } = params;
   const company = await getData(slug);
-  console.log(company);
   if (!company) {
     redirect("/error");
   }
   return (
-    <div>
-      <h2>Company {slug}</h2>
+    <div className={css.container}>
+      <div className={css.banner}>
+        <Image src={company.img} alt="test" width={500} height={200} />
+      </div>
+      <div>
+        <h1>{company.title}</h1>
+        <h4>Note ( à faire )</h4>
+      </div>
+      <div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 };

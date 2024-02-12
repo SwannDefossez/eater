@@ -19,7 +19,7 @@ const SwiperComponent = ({ companies }) => {
 
   return (
     <div className={css.container}>
-      <h1>Nos Partenaires</h1>
+      <h2>Nos Partenaires</h2>
       <Swiper
         className={css.swiper}
         autoplay={{ delay: 10000, disableOnInteraction: false }}
@@ -27,6 +27,7 @@ const SwiperComponent = ({ companies }) => {
         slidesPerView={3}
         modules={[Autoplay, Navigation]}
         loop={true}
+        spaceBetween={100}
         onSlideChange={(e) => handleSwiper(e)}
       >
         {companies.map((company) => {

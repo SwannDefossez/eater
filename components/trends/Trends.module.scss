@@ -2,15 +2,16 @@
 
 .container {
   @include flex(column, center, center);
-  gap: 3rem;
-  h1 {
+  gap: 1rem;
+  margin-bottom: 7rem;
+  h2 {
     font-weight: 300;
   }
 }
 .swiper {
   img {
     border-radius: 1rem;
-    width: 30vw;
+    width: 50vw;
     max-width: 15rem;
     height: auto;
   }
